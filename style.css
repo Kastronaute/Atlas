@@ -1,0 +1,218 @@
+/* L'Atlas — un atlas sensoriel de l'existence */
+
+:root {
+    --bg: #faf8f4;
+    --text: #2c2a26;
+    --text-light: #6b6760;
+    --accent: #8b7355;
+    --rule: #d4cfc7;
+    --max-w: 660px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1a1916;
+        --text: #d4cfc7;
+        --text-light: #8b8680;
+        --accent: #c4a87a;
+        --rule: #3a3630;
+    }
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: Georgia, 'Noto Serif', 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.78;
+    padding: 2rem 1.5rem;
+}
+
+/* Chapter */
+.chapter {
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.chapter header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+}
+
+.ch-num {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.chapter h1 {
+    font-size: 2.4rem;
+    font-weight: normal;
+    letter-spacing: 0.06em;
+}
+
+.chapter-body p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+.chapter-body hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.5rem auto;
+    width: 36%;
+}
+
+.chapter-body em { font-style: italic; }
+.chapter-body strong { font-weight: bold; }
+
+/* Nav */
+.ch-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.82rem;
+    gap: 1rem;
+}
+
+.ch-nav a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.ch-nav a:hover { opacity: 0.65; }
+.ch-nav .mid { color: var(--text-light); }
+.ch-nav .prev, .ch-nav .next { max-width: 38%; }
+.ch-nav .prev { text-align: left; }
+.ch-nav .next { text-align: right; }
+
+/* Index */
+.idx {
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+
+.idx-head {
+    text-align: center;
+    padding: 5rem 0 3rem;
+}
+
+.idx-head h1 {
+    font-size: 3.2rem;
+    font-weight: normal;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.3rem;
+}
+
+.idx-sub {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+
+.idx-epigraph {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+}
+
+.idx-closing {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.toc {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-gap: 2rem;
+}
+
+.toc li {
+    padding: 0.35rem 0;
+    break-inside: avoid;
+}
+
+.toc a {
+    color: var(--text);
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s;
+}
+
+.toc a:hover { color: var(--accent); }
+
+.toc-n {
+    display: inline-block;
+    width: 2.2rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+.toc-sep {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    column-span: all;
+}
+
+.toc-sep a { font-style: italic; }
+
+.idx-foot {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+}
+
+.idx-foot .credit {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+}
+
+.idx-foot .license {
+    font-size: 0.78rem;
+}
+
+.idx-foot .license a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.idx-foot .license a:hover { color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 640px) {
+    html { font-size: 16px; }
+    body { padding: 1rem; }
+    .chapter header { padding-top: 1rem; margin-bottom: 2rem; }
+    .chapter h1 { font-size: 1.9rem; }
+    .idx-head { padding: 3rem 0 2rem; }
+    .idx-head h1 { font-size: 2.4rem; }
+    .toc { columns: 1; }
+    .ch-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .ch-nav .prev, .ch-nav .next { max-width: 100%; }
+}
