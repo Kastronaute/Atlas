@@ -1,4 +1,3 @@
 build.py
-*.pyc
-__pycache__/
+._*
 .DS_Store
