@@ -216,3 +216,40 @@ body {
     }
     .ch-nav .prev, .ch-nav .next { max-width: 100%; }
 }
+
+
+/* --- EN balise additions --- */
+.top-nav {
+    max-width: var(--max-w); margin: 0 auto 2.5rem; padding-bottom: 1rem;
+    border-bottom: 1px solid var(--rule); font-size: 0.8rem; text-align: center;
+    letter-spacing: 0.04em;
+}
+.top-nav a { color: var(--accent); text-decoration: none; }
+.top-nav a:hover { opacity: 0.65; }
+.top-nav .sep { color: var(--rule); margin: 0 0.4rem; }
+.top-nav .here { color: var(--text-light); }
+.top-nav .lang { display: block; margin-top: 0.5rem; color: var(--text-light); font-size: 0.72rem; letter-spacing: 0.1em; }
+.top-nav .lang a { color: var(--text-light); }
+.top-nav .lang .here { color: var(--text); font-weight: bold; }
+
+.essay { max-width: var(--max-w); margin: 0 auto; }
+.essay h1 { font-size: 2.4rem; font-weight: normal; letter-spacing: 0.04em; text-align: center; margin-bottom: 0.6rem; }
+.essay .essay-sub { font-style: italic; font-weight: normal; color: var(--text-light); text-align: center; font-size: 1rem; margin-bottom: 2.5rem; }
+.essay h2 { font-size: 1.35rem; font-weight: normal; letter-spacing: 0.02em; margin: 2.5rem 0 1rem; }
+.essay h3 { font-size: 1.05rem; font-weight: normal; color: var(--text-light); margin: 1.5rem 0 0.8rem; }
+.essay p { margin-bottom: 1.3rem; text-align: justify; hyphens: auto; }
+.essay ul { margin: 0 0 1.3rem 1.2rem; }
+.essay li { margin-bottom: 0.5rem; }
+.essay blockquote { margin: 1.5rem 0; padding-left: 1rem; border-left: 2px solid var(--accent); color: var(--text-light); font-style: italic; }
+.essay hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem auto; width: 36%; }
+.essay code { font-family: 'SF Mono', Menlo, monospace; font-size: 0.86em; background: rgba(139,115,85,0.10); padding: 0.05em 0.3em; border-radius: 3px; }
+.essay em { font-style: italic; } .essay strong { font-weight: bold; }
+
+.invite {
+    max-width: var(--max-w); margin: 3.5rem auto 0; padding-top: 2rem;
+    border-top: 1px solid var(--rule); text-align: center; font-style: italic; color: var(--text-light);
+}
+.invite .doors { font-style: normal; margin-top: 1.2rem; font-size: 0.95rem; }
+.invite .doors a { color: var(--accent); text-decoration: none; }
+.invite .doors a:hover { opacity: 0.65; }
+.idx-foot .download a { color: var(--accent); text-decoration: none; }
