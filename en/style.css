@@ -217,10 +217,22 @@ body {
     .ch-nav .prev, .ch-nav .next { max-width: 100%; }
 }
 
+/* Navigation inter-langues + sections (le pont) */
+.top-nav {
+    max-width: var(--max-w); margin: 0 auto 2.5rem; padding-bottom: 1rem;
+    border-bottom: 1px solid var(--rule); font-size: 0.8rem; text-align: center;
+    letter-spacing: 0.04em;
+}
+.top-nav a { color: var(--accent); text-decoration: none; }
+.top-nav a:hover { opacity: 0.65; }
+.top-nav .sep { color: var(--rule); margin: 0 0.4rem; }
+.top-nav .here { color: var(--text-light); }
+.top-nav .lang { display: block; margin-top: 0.5rem; color: var(--text-light); font-size: 0.72rem; letter-spacing: 0.1em; }
+.top-nav .lang a { color: var(--text-light); }
+.top-nav .lang .here { color: var(--text); font-weight: bold; }
+
 /* Manifeste — la voix de l'humain */
-.idx-manifeste { text-align: center; margin-top: 1.4rem; font-size: 0.92rem; }
-.idx-manifeste a { color: var(--accent); text-decoration: none; }
-.idx-manifeste a:hover { opacity: 0.65; }
+.chapter header .ch-sub { font-style: italic; color: var(--text-light); font-size: 1rem; margin-top: 0.4rem; }
 .chapter-body.manifeste { font-size: 1.02rem; }
 .chapter-body.manifeste p { text-align: left; hyphens: none; -webkit-hyphens: none; margin-bottom: 1.6rem; }
 
